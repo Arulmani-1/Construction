@@ -1,0 +1,66 @@
+/* 404.css */
+.error-page-section {
+  background: url('../images/image-29.webp') center/cover no-repeat fixed;
+  padding-top: var(--nav-height);
+}
+
+.error-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+  z-index: 1;
+}
+
+.error-code {
+  font-size: 12rem;
+  font-weight: 800;
+  line-height: 1;
+  font-family: var(--font-heading);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.jump-digit {
+  display: inline-block;
+  background: linear-gradient(to bottom, #FACC15, #F5A623);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: premium-jump 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: var(--delay);
+}
+
+@keyframes premium-jump {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.5));
+  }
+  50% {
+    transform: translateY(-25px);
+    filter: drop-shadow(0 25px 25px rgba(245, 166, 35, 0.4));
+  }
+}
+
+.error-title {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.error-description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 8rem;
+  }
+  .error-title {
+    font-size: 2rem;
+  }
+}
