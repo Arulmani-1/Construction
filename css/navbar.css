@@ -1,0 +1,229 @@
+/* Navbar Base */
+.premium-nav {
+  height: var(--nav-height);
+  transition: var(--transition-smooth);
+  background: var(--dark) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.premium-nav.scrolled {
+  background: var(--dark) !important;
+  height: 70px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.brand-logo {
+  font-size: 1.8rem;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.brand-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Mobile Toggler */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  cursor: pointer;
+}
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #fff 0%, #38bdf8 100%);
+  transition: var(--transition-fast);
+}
+.hamburger-icon span:nth-child(1) {
+  width: 100%;
+}
+.hamburger-icon span:nth-child(2) {
+  width: 65%;
+  margin-left: auto;
+}
+.hamburger-icon span:nth-child(3) {
+  width: 100%;
+}
+
+.premium-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem;
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.premium-nav .nav-link:hover,
+.premium-nav .nav-link.active {
+  color: #fff;
+}
+
+.premium-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition-smooth);
+  transform: translateX(-50%);
+}
+
+.premium-nav .nav-link:hover::before,
+.premium-nav .nav-link.active::before {
+  width: 70%;
+}
+
+/* Mega Menu */
+.mega-dropdown { position: static !important; }
+.mega-menu {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: calc(100% + 10px);
+  padding: 2rem;
+  border-radius: 0 0 12px 12px;
+  border: none;
+  border-top: 2px solid var(--primary);
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: var(--transition-smooth);
+  background: var(--dark) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.mega-dropdown:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu .dropdown-item {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0;
+  transition: var(--transition-fast);
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+}
+
+.mega-menu .dropdown-item i {
+  color: var(--primary);
+  margin-right: 10px;
+  font-size: 1.1rem;
+  transition: var(--transition-fast);
+}
+
+.mega-menu .dropdown-item:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.mega-menu .dropdown-item:hover i {
+  color: var(--accent);
+}
+
+/* Standard Dropdown */
+.dropdown-menu:not(.mega-menu) {
+  background: var(--dark) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-top: 15px;
+  padding: 1rem 0;
+  border-radius: 8px;
+  border-top: 2px solid var(--primary);
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: var(--transition-smooth);
+}
+.dropdown:hover > .dropdown-menu:not(.mega-menu) {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu:not(.mega-menu) .dropdown-item {
+  color: rgba(255,255,255,0.8);
+  padding: 0.5rem 1.5rem;
+}
+.dropdown-menu:not(.mega-menu) .dropdown-item:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  padding-left: 1.8rem;
+}
+
+/* Mobile Offcanvas Menu */
+.offcanvas.bg-dark-custom {
+  background-color: var(--dark) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 1rem 1.5rem;
+}
+.offcanvas-title {
+  font-size: 0 !important; /* Hides the STACKLY text next to icon */
+}
+.offcanvas-title i {
+  font-size: 1.5rem;
+  color: var(--primary) !important;
+}
+.btn-close-white {
+  opacity: 0.7;
+}
+.btn-close-white:focus {
+  box-shadow: none;
+}
+.offcanvas-body {
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+.offcanvas .navbar-nav {
+  padding-right: 0 !important;
+}
+.offcanvas .navbar-nav .nav-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.offcanvas .nav-link {
+  color: #fff !important;
+  font-size: 1.05rem !important;
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 12px 0 !important;
+  border: none !important;
+}
+.offcanvas .mt-4 {
+  margin-top: 1.5rem !important;
+}
+.offcanvas .btn-premium {
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 12px 0;
+  font-size: 1rem;
+}

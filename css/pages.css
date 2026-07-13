@@ -1,0 +1,53 @@
+/* Pages specific */
+.pages-hero {
+  min-height: 40vh;
+  padding-top: var(--nav-height);
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.pages-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(245, 166, 35, 0.1), transparent 70%);
+}
+
+.page-link-card {
+  display: block;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary);
+  transition: var(--transition-smooth);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.page-link-card:hover {
+  transform: translateY(-10px);
+  background: var(--primary);
+  color: var(--dark);
+  box-shadow: 0 15px 35px rgba(245, 166, 35, 0.3);
+}
+
+.page-link-card i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  transition: var(--transition-smooth);
+  display: block;
+}
+
+.page-link-card:hover i {
+  color: var(--dark);
+  transform: scale(1.1);
+}
+
+.page-link-card h4 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
