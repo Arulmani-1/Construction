@@ -41,7 +41,7 @@
   <!-- Main Content -->
   <main class="main-content">
     <header class="dashboard-header d-flex justify-content-between align-items-center">
-      <h3 class="mb-0 fw-bold text-white">System Settings</h3>
+      <div class="d-flex align-items-center"><button class="sidebar-toggler"><i class="bi bi-list fs-3 text-white"></i></button><h3 class="mb-0 fw-bold text-white">System Settings</h3></div>
       <div class="user-profile d-flex align-items-center gap-3">
         <span class="text-white"><strong id="displayEmail">SuperUser</strong></span>
         <div class="avatar bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"><i class="bi bi-shield-lock"></i></div>
@@ -56,20 +56,20 @@
             <form>
               <div class="mb-3">
                 <label class="form-label text-muted">Company Name</label>
-                <input type="text" class="form-control bg-transparent border-secondary text-dark" value="Stackly Construction">
+                <input type="text" class="form-control text-dark border-dark shadow-none" value="Stackly Construction">
               </div>
               <div class="mb-3">
                 <label class="form-label text-muted">Support Email</label>
-                <input type="email" class="form-control bg-transparent border-secondary text-dark" value="support@stackly.com">
+                <input type="email" class="form-control text-dark border-dark shadow-none" value="support@stackly.com">
               </div>
               <hr class="border-secondary my-4">
               <h6 class="text-dark mb-3">Notification Preferences</h6>
               <div class="form-check form-switch mb-3">
-                <input class="form-check-input bg-transparent border-secondary" type="checkbox" id="emailNotif" checked>
+                <input class="form-check-input shadow-none" type="checkbox" id="emailNotif" checked>
                 <label class="form-check-label text-dark" for="emailNotif">Email Notifications</label>
               </div>
               <div class="form-check form-switch mb-4">
-                <input class="form-check-input bg-transparent border-secondary" type="checkbox" id="smsNotif">
+                <input class="form-check-input shadow-none" type="checkbox" id="smsNotif">
                 <label class="form-check-label text-dark" for="smsNotif">SMS Alerts (Critical only)</label>
               </div>
               <button type="button" class="btn btn-primary px-4">Save Changes</button>
@@ -85,6 +85,21 @@
     const email = sessionStorage.getItem('userEmail');
     if (email) {
       document.getElementById('displayEmail').innerText = email;
+    }
+    const toggler = document.querySelector('.sidebar-toggler');
+    const sidebar = document.querySelector('.sidebar, .admin-sidebar');
+    if (toggler && sidebar) {
+      const overlay = document.createElement('div');
+      overlay.className = 'sidebar-overlay';
+      document.body.appendChild(overlay);
+      toggler.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+        overlay.classList.toggle('show');
+      });
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('show');
+        overlay.classList.remove('show');
+      });
     }
   });
 </script>
