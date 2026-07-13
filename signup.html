@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Portal | Stackly Construction</title>
+  <title>Sign Up | Stackly Construction</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
 <div id="page-loader"><div class="loader-brand">STACKLY<span>.</span></div><div class="loader-bar-container"><div class="loader-bar"></div></div></div>
@@ -37,11 +37,25 @@
     <a href="index.html" class="login-brand"><img src="images/logo.webp" alt="Stackly Logo" style="height: 45px; width: auto; object-fit: contain;"></a>
     
     <div class="text-center mb-4">
-      <h4 class="fw-bold">Client Portal</h4>
-      <p class="small text-white-50">Sign in to track your project progress</p>
+      <h4 class="fw-bold">Create Account</h4>
+      <p class="small text-white-50">Join Stackly to track your projects</p>
     </div>
 
-    <form id="loginForm">
+        <form id="signupForm">
+      <div class="row g-2 mb-3">
+        <div class="col-6 position-relative">
+          <input type="text" class="form-control login-input" placeholder="First Name" required>
+        </div>
+        <div class="col-6 position-relative">
+          <input type="text" class="form-control login-input" placeholder="Last Name" required>
+        </div>
+      </div>
+      
+      <div class="mb-3 position-relative">
+        <input type="email" class="form-control login-input" placeholder="Email Address" required>
+        <i class="bi bi-envelope input-icon pe-none"></i>
+      </div>
+      
       <div class="mb-3 position-relative">
         <select class="form-select login-input custom-select" required>
           <option value="" disabled selected hidden>Select Role</option>
@@ -51,30 +65,21 @@
       </div>
       
       <div class="mb-3 position-relative">
-        <input type="email" class="form-control login-input" placeholder="Email Address" required>
-        <i class="bi bi-envelope input-icon pe-none"></i>
-      </div>
-      
-      <div class="mb-3 position-relative">
         <input type="password" id="passwordField" class="form-control login-input" placeholder="Password" required>
         <i class="bi bi-eye-slash input-icon" id="togglePassword"></i>
       </div>
-
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <div class="form-check">
-          <input class="form-check-input bg-transparent border-secondary" type="checkbox" id="rememberMe">
-          <label class="form-check-label" for="rememberMe">Remember Me</label>
-        </div>
-        <a href="#" class="login-link small">Forgot Password?</a>
+      
+      <div class="mb-4 position-relative">
+        <input type="password" class="form-control login-input" placeholder="Confirm Password" required>
       </div>
 
-      <button type="submit" class="btn w-100 btn-login d-flex align-items-center justify-content-center interactive" id="loginBtn">
-        <span class="text">Sign In</span>
+      <button type="submit" class="btn w-100 btn-login d-flex align-items-center justify-content-center interactive" id="signupBtn">
+        <span class="text">Create Account</span>
         <div class="loading-spinner"></div>
       </button>
 
       <div class="text-center mt-4">
-        <p class="small mb-0 text-white-50">Don't have an account? <a href="signup.html" class="login-link fw-bold">Sign Up</a></p>
+        <p class="small mb-0 text-white-50">Already have an account? <a href="login.html" class="login-link fw-bold">Sign In</a></p>
       </div>
     </form>
   </div>
@@ -109,19 +114,19 @@
       });
 
       // Animated Validation & Loading Button
-      const loginForm = document.getElementById('loginForm');
-      const loginBtn = document.getElementById('loginBtn');
+      const loginForm = document.getElementById('signupForm');
+      const loginBtn = document.getElementById('signupBtn');
       
-      loginForm.addEventListener('submit', (e) => {
+      signupForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        loginBtn.classList.add('loading');
+        signupBtn.classList.add('loading');
         
         // Simulate API call
         setTimeout(() => {
-          loginBtn.classList.remove('loading');
+          signupBtn.classList.remove('loading');
           // In a real app, redirect or show error
-          alert('Login Successful (Simulation)');
-          window.location.href = 'index.html';
+          alert('Account Created Successfully (Simulation)');
+          window.location.href = 'login.html';
         }, 1500);
       });
 
