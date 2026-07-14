@@ -113,7 +113,12 @@
 }
 
 /* Project Card */
+.project-card {
+  height: 400px;
+}
 .project-card .project-img {
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .project-card:hover .project-img {
