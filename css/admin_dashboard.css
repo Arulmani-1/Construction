@@ -1,6 +1,5 @@
 .dashboard-body {
   background-color: #f4f6f9;
-  display: flex;
   min-height: 100vh;
   font-family: var(--font-body);
 }
@@ -12,7 +11,9 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .sidebar-header {
@@ -55,6 +56,9 @@
   padding: 20px 30px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   background-color: var(--dark);
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 }
 
 .avatar { width: 40px; height: 40px; }
@@ -171,16 +175,14 @@
 }
 @media (max-width: 767px) {
   .dashboard-header {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 15px;
     padding: 15px 20px;
   }
-  .dashboard-header .user-profile {
-    align-self: flex-end;
-  }
   .dashboard-header h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+  }
+  .dashboard-header .user-profile {
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
   .admin-table th, .admin-table td {
     white-space: nowrap;

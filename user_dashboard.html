@@ -32,7 +32,7 @@
       <li class="nav-item">
         <a class="nav-link" href="user_invoices.html"><i class="bi bi-receipt"></i> Invoices</a>
       </li>
-      <li class="nav-item mt-auto">
+      <li class="nav-item mt-auto d-none d-lg-block">
         <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-left"></i> Logout</a>
       </li>
     </ul>
@@ -43,8 +43,8 @@
     <header class="dashboard-header d-flex justify-content-between align-items-center">
       <div class="d-flex align-items-center"><button class="sidebar-toggler"><i class="bi bi-list fs-3 text-white"></i></button><h3 class="mb-0 fw-bold text-white">Welcome back user</h3></div>
       <div class="user-profile d-flex align-items-center gap-3">
-        <span class="text-white">Welcome, <strong id="displayEmail">John Doe</strong></span>
-        <div class="avatar bg-primary text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold">JD</div>
+        <span class="text-white d-none d-md-block"><strong id="displayEmail">John Doe</strong></span>
+        <a href="login.html" class="btn btn-sm btn-outline-light d-lg-none" title="Logout"><i class="bi bi-box-arrow-right"></i></a>
       </div>
     </header>
 
