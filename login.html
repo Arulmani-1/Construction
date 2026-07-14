@@ -65,7 +65,7 @@
           <input class="form-check-input bg-transparent border-secondary" type="checkbox" id="rememberMe">
           <label class="form-check-label" for="rememberMe">Remember Me</label>
         </div>
-        <a href="#" class="login-link small">Forgot Password?</a>
+        <a href="404.html" class="login-link small">Forgot Password?</a>
       </div>
 
       <button type="submit" class="btn w-100 btn-login d-flex align-items-center justify-content-center interactive" id="loginBtn">
@@ -104,17 +104,23 @@
       const password = document.getElementById('passwordField').value;
       
       let users = JSON.parse(localStorage.getItem('users') || '[]');
-      let user = users.find(u => u.email === email && u.password === password);
+      let existingUser = users.find(u => u.email === email);
       
-      if(user) {
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        if(user.role === 'admin') {
-          window.location.href = 'admin_dashboard.html';
-        } else {
-          window.location.href = 'user_dashboard.html';
-        }
+      let user = existingUser || { 
+        name: email ? email.split('@')[0] : (role === 'admin' ? 'Admin' : 'User'), 
+        email: email, 
+        role: role 
+      };
+      
+      // Override role with what they just selected so it goes to the correct dashboard
+      user.role = role;
+      
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      
+      if(role === 'admin') {
+        window.location.href = 'admin_dashboard.html';
       } else {
-        alert('Invalid credentials or role');
+        window.location.href = 'user_dashboard.html';
       }
     });
   </script>
