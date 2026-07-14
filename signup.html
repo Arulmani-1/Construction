@@ -44,20 +44,20 @@
         <form id="signupForm">
       <div class="row g-2 mb-3">
         <div class="col-6 position-relative">
-          <input type="text" class="form-control login-input" placeholder="First Name" required>
+          <input type="text" id="firstNameField" class="form-control login-input" placeholder="First Name" required>
         </div>
         <div class="col-6 position-relative">
-          <input type="text" class="form-control login-input" placeholder="Last Name" required>
+          <input type="text" id="lastNameField" class="form-control login-input" placeholder="Last Name" required>
         </div>
       </div>
       
       <div class="mb-3 position-relative">
-        <input type="email" class="form-control login-input" placeholder="Email Address" required>
+        <input type="email" id="emailField" class="form-control login-input" placeholder="Email Address" required>
         <i class="bi bi-envelope input-icon pe-none"></i>
       </div>
       
       <div class="mb-3 position-relative">
-        <select class="form-select login-input custom-select" required>
+        <select id="roleSelect" class="form-select login-input custom-select" required>
           <option value="" disabled selected hidden>Select Role</option>
           <option value="user" class="text-dark">User</option>
           <option value="admin" class="text-dark">Admin</option>
@@ -119,15 +119,31 @@
       
       signupForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        signupBtn.classList.add('loading');
         
-        // Simulate API call
-        setTimeout(() => {
-          signupBtn.classList.remove('loading');
-          // In a real app, redirect or show error
-          alert('Account Created Successfully (Simulation)');
-          window.location.href = 'login.html';
-        }, 1500);
+        const firstName = document.getElementById('firstNameField') ? document.getElementById('firstNameField').value : '';
+        const lastName = document.getElementById('lastNameField') ? document.getElementById('lastNameField').value : '';
+        const email = document.getElementById('emailField') ? document.getElementById('emailField').value : '';
+        const role = document.getElementById('roleSelect') ? document.getElementById('roleSelect').value : '';
+        const password = document.getElementById('passwordField') ? document.getElementById('passwordField').value : '';
+        
+        const user = {
+          name: firstName + ' ' + lastName,
+          email: email,
+          role: role,
+          password: password
+        };
+        
+        let users = JSON.parse(localStorage.getItem('users') || '[]');
+        if(users.some(u => u.email === email)) {
+          alert('Email already registered');
+          return;
+        }
+        
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+        
+        // Redirect to login page immediately
+        window.location.href = 'login.html';
       });
 
       // Initialize Particles
