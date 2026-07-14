@@ -42,7 +42,8 @@
   <nav class="navbar navbar-expand-lg fixed-top premium-nav" id="mainNav">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center interactive" href="index.html">
-        <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img" style="height: 35px; width: auto; object-fit: contain;">
+        <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img"
+          style="height: 35px; width: auto; object-fit: contain;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -192,7 +193,8 @@
                 class="bi bi-check-circle-fill text-primary-custom me-3 fs-5"></i> <span>Award-winning architecture &
                 design team</span></li>
             <li class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary-custom me-3 fs-5"></i>
-              <span>Commitment to 100% sustainable practices</span></li>
+              <span>Commitment to 100% sustainable practices</span>
+            </li>
           </ul>
           <a href="about.html" class="btn btn-premium interactive">Discover Our Story</a>
         </div>
@@ -341,21 +343,7 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-5 position-relative cta-section overflow-hidden">
-    <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-75"></div>
-    <!-- background image with parallax -->
-    <div class="position-absolute top-0 start-0 w-100 h-100"
-      style="background: url('images/image-21.webp') center/cover fixed; z-index:-1;"></div>
 
-    <div class="container position-relative z-1 py-5 text-center text-dark">
-      <h2 class="title-md fw-bold mb-4" data-aos="zoom-in">Ready to start your next big project?</h2>
-      <p class="lead mb-5 max-w-700 mx-auto" data-aos="zoom-in" data-aos-delay="100">Contact our team of experts today
-        and let's build the future together.</p>
-      <a href="contact.html" class="btn btn-dark btn-lg px-5 py-3 fs-5 rounded-1 interactive shadow-lg"
-        data-aos="zoom-in" data-aos-delay="200">Request a Consultation</a>
-    </div>
-  </section>
 
   <!-- Footer (Injected statically) -->
   <footer class="footer-premium text-white position-relative overflow-hidden pt-5">
@@ -366,17 +354,18 @@
       <div class="row pt-5 pb-4 g-4">
         <div class="col-lg-4 mb-4">
           <a class="navbar-brand d-flex align-items-center interactive mb-4" href="index.html">
-            <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img" style="height: 35px; width: auto; object-fit: contain;">
+            <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img"
+              style="height: 35px; width: auto; object-fit: contain;">
           </a>
           <p class="text-muted pe-lg-4 mb-4">
             Building the future through world-class engineering, luxury architecture, and sustainable infrastructure.
             Stackly is your global partner in construction.
           </p>
           <div class="social-icons d-flex gap-3">
-            <a href="#" class="social-icon interactive"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="social-icon interactive"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="social-icon interactive"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-icon interactive"><i class="bi bi-youtube"></i></a>
+            <a href="404.html" class="social-icon interactive"><i class="bi bi-linkedin"></i></a>
+            <a href="404.html" class="social-icon interactive"><i class="bi bi-twitter-x"></i></a>
+            <a href="404.html" class="social-icon interactive"><i class="bi bi-instagram"></i></a>
+            <a href="404.html" class="social-icon interactive"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
@@ -386,7 +375,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="projects.html">Our Projects</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="pages.html">Careers</a></li>
+            <li><a href="404.html">Careers</a></li>
             <li><a href="blog.html">News & Media</a></li>
           </ul>
         </div>
@@ -394,18 +383,18 @@
         <div class="col-lg-2 col-md-4 mb-4">
           <h5 class="footer-heading mb-4 text-white">Services</h5>
           <ul class="list-unstyled footer-links">
-            <li><a href="services.html">Commercial</a></li>
-            <li><a href="services.html">Residential</a></li>
-            <li><a href="services.html">Industrial</a></li>
-            <li><a href="services.html">Infrastructure</a></li>
-            <li><a href="services.html">Architecture</a></li>
+            <li><a href="404.html">Commercial</a></li>
+            <li><a href="404.html">Residential</a></li>
+            <li><a href="404.html">Industrial</a></li>
+            <li><a href="404.html">Infrastructure</a></li>
+            <li><a href="404.html">Architecture</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-4 mb-4">
           <h5 class="footer-heading mb-4 text-white">Newsletter</h5>
           <p class="text-muted mb-4">Subscribe to receive the latest updates, news, and insights from Stackly.</p>
-          <form class="newsletter-form position-relative">
+          <form class="newsletter-form position-relative" onsubmit="event.preventDefault(); alert('email subscription successfully');">
             <input type="email" class="form-control premium-input bg-transparent border-secondary text-white"
               placeholder="Email Address" required>
             <button type="submit"
@@ -424,9 +413,9 @@
         </div>
         <div class="col-md-6 text-center text-md-end">
           <ul class="list-inline mb-0 footer-bottom-links small">
-            <li class="list-inline-item"><a href="pages.html" class="text-muted">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="404.html" class="text-muted">Privacy Policy</a></li>
             <li class="list-inline-item"><span class="text-muted">|</span></li>
-            <li class="list-inline-item"><a href="pages.html" class="text-muted">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="404.html" class="text-muted">Terms of Service</a></li>
           </ul>
         </div>
       </div>
