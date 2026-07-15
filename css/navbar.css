@@ -211,12 +211,17 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .offcanvas .nav-link {
-  color: #fff !important;
+  color: rgba(255, 255, 255, 0.8) !important;
   font-size: 1.05rem !important;
   font-family: var(--font-body);
   font-weight: 500;
   padding: 12px 0 !important;
   border: none !important;
+  transition: var(--transition-fast);
+}
+.offcanvas .nav-link.active,
+.offcanvas .nav-link:hover {
+  color: var(--primary) !important;
 }
 .offcanvas .mt-4 {
   margin-top: 1.5rem !important;
