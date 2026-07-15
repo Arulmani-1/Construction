@@ -2,7 +2,7 @@
 .about-hero {
   min-height: 60vh;
   padding-top: var(--nav-height);
-  background: url('../images/image-18.webp') center/cover fixed;
+  background: url('../images/our-project-4.webp') center/cover fixed;
 }
 
 .timeline-section {
@@ -116,5 +116,5 @@
 
 /* Map overlay */
 .map-bg {
-  background: url('../images/image-19.webp') center/cover;
+  background: url('../images/our-project-4.webp') center/cover;
 }

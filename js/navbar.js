@@ -24,18 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="btn btn-outline-light btn-sm" onclick="localStorage.removeItem('currentUser'); window.location.reload();">Logout</button>`;
       }
       
-      const loginLinks = document.querySelectorAll('a[href="login.html"]');
-      loginLinks.forEach(link => {
-         if(link.classList.contains('dropdown-item') || link.classList.contains('nav-link')) {
-            link.textContent = 'Logout';
-            link.href = '#';
-            link.onclick = (e) => {
-               e.preventDefault();
-               localStorage.removeItem('currentUser');
-               window.location.reload();
-            };
-         }
-      });
+
     }
   }
 });

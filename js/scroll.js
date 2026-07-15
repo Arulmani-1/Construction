@@ -26,3 +26,18 @@ if (typeof ScrollTrigger !== 'undefined') {
   });
   gsap.ticker.lagSmoothing(0, 0);
 }
+
+// Handle Lenis scroll lock for Bootstrap offcanvas
+document.addEventListener('DOMContentLoaded', () => {
+  const offcanvasElementList = document.querySelectorAll('.offcanvas');
+  if (typeof lenis !== 'undefined' && offcanvasElementList.length > 0) {
+    offcanvasElementList.forEach(offcanvasEl => {
+      offcanvasEl.addEventListener('show.bs.offcanvas', () => {
+        lenis.stop();
+      });
+      offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+        lenis.start();
+      });
+    });
+  }
+});

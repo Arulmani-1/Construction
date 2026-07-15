@@ -2,7 +2,7 @@
 .blog-hero {
   min-height: 50vh;
   padding-top: var(--nav-height);
-  background: url('../images/image-18.webp') center/cover fixed;
+  background: url('../images/service-img-4.webp') center/cover fixed;
 }
 
 .blog-card {
