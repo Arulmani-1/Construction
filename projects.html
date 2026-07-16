@@ -93,6 +93,52 @@
     </div>
   </header>
 
+  <!-- Mission Vision Values Section -->
+  <section class="section-padding bg-white pb-0">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Mission -->
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="p-5 h-100 bg-white" style="border: 1px solid #e5e7eb; border-radius: 24px;">
+            <div class="mb-4">
+              <i class="bi bi-bullseye" style="font-size: 3rem; color: #ffb703;"></i>
+            </div>
+            <h4 style="color: #0d1b2a; font-weight: 700; margin-bottom: 1.5rem;">Our Mission</h4>
+            <p class="text-muted" style="line-height: 1.8; font-size: 1.05rem;">
+              Simple actions make a difference. It starts and ends with each employee striving to work safer every single day so they can return.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Vision -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-5 h-100 bg-white" style="border: 1px solid #e5e7eb; border-radius: 24px;">
+            <div class="mb-4">
+              <i class="bi bi-eye" style="font-size: 3rem; color: #ffb703;"></i>
+            </div>
+            <h4 style="color: #0d1b2a; font-weight: 700; margin-bottom: 1.5rem;">Our Vision</h4>
+            <p class="text-muted" style="line-height: 1.8; font-size: 1.05rem;">
+              Simple actions make a difference. It starts and ends with each employee striving to work safer every single day so they can return.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Values -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-5 h-100 bg-white" style="border: 1px solid #e5e7eb; border-radius: 24px;">
+            <div class="mb-4">
+              <i class="bi bi-gem" style="font-size: 3rem; color: #ffb703;"></i>
+            </div>
+            <h4 style="color: #0d1b2a; font-weight: 700; margin-bottom: 1.5rem;">Our Values</h4>
+            <p class="text-muted" style="line-height: 1.8; font-size: 1.05rem;">
+              Simple actions make a difference. It starts and ends with each employee striving to work safer every single day so they can return.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Featured Projects Section -->
   <section class="section-padding position-relative" style="background-color: #eff9fc; overflow: hidden;">
     <div class="container position-relative z-1">
@@ -255,6 +301,32 @@
             </div>
           </div>
         </div>
+
+        <!-- Project 5 (Ongoing, Commercial) -->
+        <div class="col-lg-4 col-md-6 project-item-wrap ongoing commercial">
+          <div class="project-item interactive">
+            <img src="images/our-project-1.webp" alt="Zenith Skyscraper">
+            <div class="project-info">
+              <h4>Zenith Skyscraper</h4>
+              <p>Ongoing | New York</p>
+              <a href="#" class="project-link" data-bs-toggle="modal" data-bs-target="#projectModal"><i
+                  class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 (Upcoming, Infrastructure) -->
+        <div class="col-lg-4 col-md-6 project-item-wrap upcoming">
+          <div class="project-item interactive">
+            <img src="images/our-project-3.webp" alt="Eco Marina">
+            <div class="project-info">
+              <h4>Eco Marina Complex</h4>
+              <p>Upcoming | Singapore</p>
+              <a href="#" class="project-link" data-bs-toggle="modal" data-bs-target="#projectModal"><i
+                  class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Load More -->
@@ -272,89 +344,102 @@
         <div class="modal-header border-0 pb-0">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body pt-0 px-4 px-lg-5 pb-5" data-lenis-prevent>
-          <div class="row align-items-center mb-4">
-            <div class="col-md-8">
-              <span class="text-overline">Commercial</span>
-              <h2 class="title-md mb-2">Apex Tower Skyline</h2>
-              <p class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> MMR Complex, Salem, Tamil Nadu,
-                India</p>
-            </div>
-            <div class="col-md-4 text-md-end">
-              <span class="badge bg-success p-2 fs-6 rounded-pill">Status: Completed</span>
-            </div>
-          </div>
-
-          <div class="row g-4">
+        <div class="modal-body pt-2 px-4 px-lg-5 pb-5" data-lenis-prevent>
+          <div class="row g-5">
+            <!-- Left Column -->
             <div class="col-lg-8">
-              <!-- Swiper for detail -->
-              <div class="swiper detail-swiper rounded-4 mb-3">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="images/image-33.webp" class="w-100 rounded-4" alt="Img 1"></div>
-                  <div class="swiper-slide"><img src="images/image-33.webp" class="w-100 rounded-4" alt="Img 2"></div>
+              <h2 id="modalProjectTitle" class="fw-bold mb-4" style="color: #0d1b2a;">Project Title</h2>
+              <img id="modalProjectImage" src="images/image-33.webp" class="w-100 mb-4" style="border-radius: 24px;" alt="Project Image">
+              
+              <p class="text-muted mb-4" style="line-height: 1.8;">Construction standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              
+              <p class="text-muted mb-5" style="line-height: 1.8;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga harum quidem rerum facilis est et expedita distinctio.</p>
+              
+              <h4 class="fw-bold mb-4" style="color: #0d1b2a;">Building better development</h4>
+              
+              <p class="text-muted mb-4" style="line-height: 1.8;">Aenean sed adipiscing diam donec adipiscing tristique risus. Nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus.</p>
+              
+              <div class="row g-4 mb-5">
+                <div class="col-md-6 d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-warning me-3" style="font-size: 1.25rem;"></i> <span class="fw-bold text-dark">Building the future with ideas</span>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="col-md-6 d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-warning me-3" style="font-size: 1.25rem;"></i> <span class="fw-bold text-dark">Engineering the better way</span>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-warning me-3" style="font-size: 1.25rem;"></i> <span class="fw-bold text-dark">Designing future with excellence</span>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-warning me-3" style="font-size: 1.25rem;"></i> <span class="fw-bold text-dark">Discovering possibility in concrete</span>
+                </div>
               </div>
-
-              <h4 class="fw-bold mt-4 mb-3">Project Description</h4>
-              <p class="text-muted">The Apex Tower Skyline is a 75-story commercial skyscraper featuring an innovative
-                exoskeleton design that reduces internal columns. It incorporates full LEED Platinum sustainable systems
-                including solar glass and rainwater harvesting.</p>
-
-              <h4 class="fw-bold mt-4 mb-3">Location Map</h4>
-              <div class="rounded-4 overflow-hidden mb-4" style="height: 300px;">
-                <iframe
-                  src="https://maps.google.com/maps?q=Stackly,%20MMR%20Complex,%20Periyakollappatty,%20Chinna%20Thirupathi,%20Salem,%20Tamil%20Nadu%20636008,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
+              <h4 class="fw-bold mb-4" style="color: #0d1b2a;">Project Gallery</h4>
+              <div class="row g-3">
+                <div class="col-3">
+                  <img src="images/project-gallery-1.webp" class="w-100" style="border-radius: 16px; object-fit: cover; aspect-ratio: 1;" alt="Gallery 1">
+                </div>
+                <div class="col-3">
+                  <img src="images/project-gallery-2.webp" class="w-100" style="border-radius: 16px; object-fit: cover; aspect-ratio: 1;" alt="Gallery 2">
+                </div>
+                <div class="col-3">
+                  <img src="images/project-gallery-3.webp" class="w-100" style="border-radius: 16px; object-fit: cover; aspect-ratio: 1;" alt="Gallery 3">
+                </div>
+                <div class="col-3">
+                  <img src="images/project-gallery-4.webp" class="w-100" style="border-radius: 16px; object-fit: cover; aspect-ratio: 1;" alt="Gallery 4">
+                </div>
               </div>
             </div>
-
+            
+            <!-- Right Column -->
             <div class="col-lg-4">
-              <div class="project-meta-box mb-4">
-                <h5 class="fw-bold mb-4">Project Info</h5>
-                <div class="mb-3">
-                  <small class="text-muted d-block">Client</small>
-                  <span class="fw-bold">Global Finance Group</span>
-                </div>
-                <div class="mb-3">
-                  <small class="text-muted d-block">Architect</small>
-                  <span class="fw-bold">Sarah Jenkins (Stackly)</span>
-                </div>
-                <div class="mb-3">
-                  <small class="text-muted d-block">Value</small>
-                  <span class="fw-bold">$1.2 Billion</span>
-                </div>
-                <div class="mb-3">
-                  <small class="text-muted d-block">Area</small>
-                  <span class="fw-bold">1,500,000 sq ft</span>
-                </div>
-              </div>
-
-              <div class="project-meta-box bg-white border border-light">
-                <h5 class="fw-bold mb-4">Construction Timeline</h5>
-                <div class="timeline-sm">
-                  <div class="timeline-item">
-                    <small class="text-primary-custom fw-bold">Jan 2019</small>
-                    <p class="mb-0 small">Foundation & Excavation</p>
-                  </div>
-                  <div class="timeline-item">
-                    <small class="text-primary-custom fw-bold">Aug 2020</small>
-                    <p class="mb-0 small">Structural Framework</p>
-                  </div>
-                  <div class="timeline-item">
-                    <small class="text-primary-custom fw-bold">Mar 2022</small>
-                    <p class="mb-0 small">Facade & Glazing</p>
-                  </div>
-                  <div class="timeline-item">
-                    <small class="text-primary-custom fw-bold">Dec 2023</small>
-                    <p class="mb-0 small">Handover</p>
+              <div class="p-4 p-xl-5 bg-white" style="border: 1px solid #e5e7eb; border-radius: 24px;">
+                
+                <div class="d-flex align-items-start border-bottom pb-4 mb-4">
+                  <i class="bi bi-geo-alt text-warning mt-1 me-3" style="font-size: 1.8rem;"></i>
+                  <div>
+                    <span class="d-block text-muted small mb-1">Location</span>
+                    <h6 class="fw-bold mb-0" id="modalProjectLocation" style="color: #0d1b2a;">California, Us</h6>
                   </div>
                 </div>
+                
+                <div class="d-flex align-items-start border-bottom pb-4 mb-4">
+                  <i class="bi bi-building text-warning mt-1 me-3" style="font-size: 1.8rem;"></i>
+                  <div>
+                    <span class="d-block text-muted small mb-1">Sector</span>
+                    <h6 class="fw-bold mb-0" style="color: #0d1b2a;">Buildings, Civil</h6>
+                  </div>
+                </div>
+                
+                <div class="d-flex align-items-start border-bottom pb-4 mb-4">
+                  <i class="bi bi-diagram-3 text-warning mt-1 me-3" style="font-size: 1.8rem;"></i>
+                  <div>
+                    <span class="d-block text-muted small mb-1">Technology</span>
+                    <h6 class="fw-bold mb-0" style="color: #0d1b2a;">Monolithics</h6>
+                  </div>
+                </div>
+                
+                <div class="d-flex align-items-start border-bottom pb-4 mb-4">
+                  <i class="bi bi-file-earmark-text text-warning mt-1 me-3" style="font-size: 1.8rem;"></i>
+                  <div>
+                    <span class="d-block text-muted small mb-1">Scope Of Work</span>
+                    <h6 class="fw-bold mb-0" style="color: #0d1b2a;">12000+</h6>
+                  </div>
+                </div>
+                
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-calendar3 text-warning mt-1 me-3" style="font-size: 1.8rem;"></i>
+                  <div>
+                    <span class="d-block text-muted small mb-1">Status / Date</span>
+                    <h6 class="fw-bold mb-0" id="modalProjectStatus" style="color: #0d1b2a;">1 Jan 2024</h6>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
         </div>
+</div>
       </div>
     </div>
   </div>
@@ -484,11 +569,42 @@
         loop: true,
       });
 
-      // Update swiper on modal open
+      // Update modal dynamically on open
       const modal = document.getElementById('projectModal');
-      modal.addEventListener('shown.bs.modal', () => {
-        detailSwiper.update();
-      });
+      if (modal) {
+        modal.addEventListener('show.bs.modal', (event) => {
+          const button = event.relatedTarget;
+          if (!button) return;
+          const projectItem = button.closest('.project-item');
+          if (projectItem) {
+            const imgSrc = projectItem.querySelector('img').src;
+            const title = projectItem.querySelector('h4').innerText;
+            const desc = projectItem.querySelector('p').innerText;
+            
+            let location = "Global";
+            let status = "";
+            if (desc.includes('|')) {
+                const parts = desc.split('|');
+                status = parts[0].trim();
+                location = parts[1].trim();
+            }
+
+            const modalImg = modal.querySelector('#modalProjectImage');
+            const modalTitle = modal.querySelector('#modalProjectTitle');
+            const modalLocation = modal.querySelector('#modalProjectLocation');
+            const modalStatus = modal.querySelector('#modalProjectStatus');
+
+            if (modalImg) modalImg.src = imgSrc;
+            if (modalTitle) modalTitle.innerText = title;
+            if (modalLocation) modalLocation.innerText = location;
+            if (modalStatus) modalStatus.innerText = status;
+          }
+        });
+
+        modal.addEventListener('shown.bs.modal', () => {
+          if (typeof detailSwiper !== 'undefined' && detailSwiper) detailSwiper.update();
+        });
+      }
     });
   </script>
 </body>
