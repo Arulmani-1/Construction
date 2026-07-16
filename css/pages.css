@@ -1,53 +1,156 @@
-/* Pages specific */
+/* Premium Pages Directory Styles */
+
+/* Hero Section */
 .pages-hero {
-  min-height: 40vh;
-  padding-top: var(--nav-height);
-  background: var(--dark);
+  min-height: 50vh;
+  padding-top: var(--nav-height, 100px);
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pages-hero::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(245, 166, 35, 0.1), transparent 70%);
+  background: url('../images/our-project-1.webp') center/cover no-repeat;
+  z-index: 0;
 }
 
-.page-link-card {
-  display: block;
-  padding: 40px 30px;
-  background: #fff;
-  border-radius: 12px;
-  text-align: center;
+.pages-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(13, 27, 42, 0.95) 0%, rgba(13, 27, 42, 0.75) 100%);
+  z-index: 1;
+}
+
+/* Category Headers */
+.category-header {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  font-weight: 800;
+  color: #0d1b2a;
+}
+
+.category-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 4px;
+  background: #ffb703;
+  border-radius: 2px;
+}
+
+/* Premium Page Card */
+.premium-page-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
   text-decoration: none;
-  color: var(--secondary);
-  transition: var(--transition-smooth);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.02);
+  color: #495057;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 
-.page-link-card:hover {
-  transform: translateY(-10px);
-  background: var(--primary);
-  color: var(--dark);
-  box-shadow: 0 15px 35px rgba(245, 166, 35, 0.3);
+.premium-page-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: #ffb703;
+  transition: height 0.3s ease;
 }
 
-.page-link-card i {
-  font-size: 3rem;
-  color: var(--primary);
-  margin-bottom: 20px;
-  transition: var(--transition-smooth);
-  display: block;
+.premium-page-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(255, 183, 3, 0.15);
+  background: #ffffff;
 }
 
-.page-link-card:hover i {
-  color: var(--dark);
-  transform: scale(1.1);
+.premium-page-card:hover::before {
+  height: 100%;
 }
 
-.page-link-card h4 {
+/* Icon Wrapper */
+.premium-page-card .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 183, 3, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.premium-page-card:hover .icon-wrapper {
+  background: #ffb703;
+}
+
+.premium-page-card .icon-wrapper i {
+  font-size: 1.8rem;
+  color: #ffb703;
+  transition: color 0.3s ease;
+}
+
+.premium-page-card:hover .icon-wrapper i {
+  color: #0d1b2a;
+}
+
+/* Card Content */
+.premium-page-card .card-content {
+  flex-grow: 1;
+}
+
+.premium-page-card .card-content h4 {
   font-weight: 700;
+  margin-bottom: 8px;
+  color: #0d1b2a;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.premium-page-card:hover .card-content h4 {
+  color: #0d1b2a;
+}
+
+.premium-page-card .card-content p {
+  color: #6c757d;
+  font-size: 0.9rem;
   margin-bottom: 0;
+  line-height: 1.5;
+  padding-right: 15px;
+}
+
+/* Hover Arrow */
+.premium-page-card .hover-arrow {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px);
+  opacity: 0;
+  color: #ffb703;
+  font-size: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.premium-page-card:hover .hover-arrow {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
